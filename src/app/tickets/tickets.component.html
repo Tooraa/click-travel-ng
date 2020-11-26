@@ -1,3 +1,79 @@
 <p *ngFor="let ti of tickets" style="color: white">
   {{ ti.flight }}
 </p>
+<div *ngFor="let ti of tickets" class="ticket">
+  <div class="top-ticket">
+    <div class="left">
+      <span>Boarding Pass</span>
+      <span>{{ ti.class }}</span>
+    </div>
+    <div class="right">
+      <span>Boarding Pass</span>
+      <span>{{ ti.class }}</span>
+    </div>
+  </div>
+  <div class="content-ticket">
+    <div class="row">
+      <div class="left">
+        <span>Passenger</span>
+        <span>{{ ti.passenger }}</span>
+      </div>
+      <div class="right first-r">
+        <span>Passenger</span>
+        <span>{{ ti.passenger }}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="left">
+        <div class="part">
+          <span>Flight</span>
+          <span>{{ ti.flight }}</span>
+        </div>
+        <div class="part">
+          <span>From</span>
+          <span>{{ ti.from }}</span>
+        </div>
+        <div class="part">
+          <span>To</span>
+          <span>{{ ti.to }}</span>
+        </div>
+        <div class="part">
+          <span>Class</span>
+          <span>{{ ti.class }}</span>
+        </div>
+      </div>
+      <div class="right small">
+        <div class="part">
+          <span>GATE</span>
+          <span>{{ ti.gate }}</span>
+        </div>
+        <div class="part">
+          <span>TIME</span>
+          <span>{{ ti.time }}</span>
+        </div>
+        <div class="part">
+          <span>SEAT</span>
+          <span>{{ ti.seat }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="left">
+        <div class="part">
+          <span>GATE</span>
+          <span>{{ ti.gate }}</span>
+        </div>
+        <div class="part">
+          <span>TIME</span>
+          <span>{{ ti.time }}</span>
+        </div>
+        <div class="part">
+          <span>SEAT</span>
+          <span>{{ ti.seat }}</span>
+        </div>
+      </div>
+      <div class="right"></div>
+    </div>
+  </div>
+  <div class="foot-ticket"></div>
+</div>
