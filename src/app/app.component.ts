@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ClickTravelService } from './services/click-travel.service';
 
@@ -11,7 +12,14 @@ export class AppComponent implements OnInit {
   title = 'Choose your dream destination...';
   destinations;
   destSubscription: Subscription;
-  constructor(private clickService: ClickTravelService) {}
+  constructor(
+    private clickService: ClickTravelService,
+    private router: Router
+  ) {}
+
+  goToTicket(code) {
+    this.router.navigateByUrl('/ticket/' + code);
+  }
 
   ngOnInit(): void {
     this.clickService.getDreamDestinations().subscribe((data) => {
